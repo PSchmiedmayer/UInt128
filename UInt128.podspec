@@ -8,7 +8,7 @@
 Pod::Spec.new do |spec|
   # Project metadata
   spec.name = 'UInt128'
-  spec.version = '0.8.0'
+  spec.version = '0.9.0'
   spec.summary = 'A Swift 128-bit Unsigned Integer Data Type'
   spec.description = <<~DESC
      This library provides a Swift 4.0 compatible 128-bit Unsigned Integer
@@ -29,10 +29,10 @@ Pod::Spec.new do |spec|
   }
 
   # Where to look for source files
-  spec.source_files = 'Sources/*'
+  spec.source_files = 'Sources/UInt128/**/*.swift'
 
   # State supported version of the Swift library
-  spec.swift_version = "4.0"
+  spec.swift_version = "4.2"
 
   # OS deployment targets
   spec.ios.deployment_target = "8.0"
