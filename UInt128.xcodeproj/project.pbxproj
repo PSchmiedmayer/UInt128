@@ -13,7 +13,7 @@
          developmentRegion = "English";
          hasScannedForEncodings = "0";
          knownRegions = (
-            "en"
+            "en",
          );
          mainGroup = "OBJ_5";
          productRefGroup = "OBJ_15";
@@ -22,13 +22,13 @@
             "UInt128::UInt128",
             "UInt128::SwiftPMPackageDescription",
             "UInt128::UInt128PackageTests::ProductTarget",
-            "UInt128::UInt128Tests"
+            "UInt128::UInt128Tests",
          );
       };
       "OBJ_10" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_11"
+            "OBJ_11",
          );
          name = "Tests";
          path = "";
@@ -38,7 +38,7 @@
          isa = "PBXGroup";
          children = (
             "OBJ_12",
-            "OBJ_13"
+            "OBJ_13",
          );
          name = "UInt128Tests";
          path = "Tests/UInt128Tests";
@@ -62,8 +62,8 @@
       "OBJ_15" = {
          isa = "PBXGroup";
          children = (
+            "UInt128::UInt128::Product",
             "UInt128::UInt128Tests::Product",
-            "UInt128::UInt128::Product"
          );
          name = "Products";
          path = "";
@@ -73,7 +73,7 @@
          isa = "XCConfigurationList";
          buildConfigurations = (
             "OBJ_20",
-            "OBJ_21"
+            "OBJ_21",
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
@@ -82,7 +82,7 @@
          isa = "XCConfigurationList";
          buildConfigurations = (
             "OBJ_3",
-            "OBJ_4"
+            "OBJ_4",
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
@@ -93,33 +93,30 @@
             ENABLE_TESTABILITY = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
             );
             HEADER_SEARCH_PATHS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             INFOPLIST_FILE = "UInt128.xcodeproj/UInt128_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
             );
             OTHER_CFLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             OTHER_LDFLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             PRODUCT_BUNDLE_IDENTIFIER = "UInt128";
             PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
             PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
             SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
+            SWIFT_VERSION = "4.0";
             TARGET_NAME = "UInt128";
          };
          name = "Debug";
@@ -130,33 +127,30 @@
             ENABLE_TESTABILITY = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
             );
             HEADER_SEARCH_PATHS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             INFOPLIST_FILE = "UInt128.xcodeproj/UInt128_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
             );
             OTHER_CFLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             OTHER_LDFLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             PRODUCT_BUNDLE_IDENTIFIER = "UInt128";
             PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
             PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
             SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
+            SWIFT_VERSION = "4.0";
             TARGET_NAME = "UInt128";
          };
          name = "Release";
@@ -164,7 +158,7 @@
       "OBJ_22" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_23"
+            "OBJ_23",
          );
       };
       "OBJ_23" = {
@@ -180,7 +174,7 @@
          isa = "XCConfigurationList";
          buildConfigurations = (
             "OBJ_27",
-            "OBJ_28"
+            "OBJ_28",
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
@@ -191,15 +185,15 @@
             LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
                "-swift-version",
-               "4.2",
+               "4",
                "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
                "-target",
                "x86_64-apple-macosx10.10",
                "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk",
             );
-            SWIFT_VERSION = "4.2";
+            SWIFT_VERSION = "4.0";
          };
          name = "Debug";
       };
@@ -209,22 +203,22 @@
             LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
                "-swift-version",
-               "4.2",
+               "4",
                "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
                "-target",
                "x86_64-apple-macosx10.10",
                "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk",
             );
-            SWIFT_VERSION = "4.2";
+            SWIFT_VERSION = "4.0";
          };
          name = "Release";
       };
       "OBJ_29" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_30"
+            "OBJ_30",
          );
       };
       "OBJ_3" = {
@@ -237,14 +231,10 @@
             DYLIB_INSTALL_NAME_BASE = "@rpath";
             ENABLE_NS_ASSERTIONS = "YES";
             GCC_OPTIMIZATION_LEVEL = "0";
-            GCC_PREPROCESSOR_DEFINITIONS = (
-               "DEBUG=1",
-               "$(inherited)"
-            );
             MACOSX_DEPLOYMENT_TARGET = "10.10";
             ONLY_ACTIVE_ARCH = "YES";
             OTHER_SWIFT_FLAGS = (
-               "-DXcode"
+               "-DXcode",
             );
             PRODUCT_NAME = "$(TARGET_NAME)";
             SDKROOT = "macosx";
@@ -255,12 +245,9 @@
                "appletvos",
                "appletvsimulator",
                "watchos",
-               "watchsimulator"
+               "watchsimulator",
             );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "SWIFT_PACKAGE",
-               "DEBUG"
-            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE";
             SWIFT_OPTIMIZATION_LEVEL = "-Onone";
             USE_HEADERMAP = "NO";
          };
@@ -274,7 +261,7 @@
          isa = "XCConfigurationList";
          buildConfigurations = (
             "OBJ_33",
-            "OBJ_34"
+            "OBJ_34",
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
@@ -299,7 +286,7 @@
          isa = "XCConfigurationList";
          buildConfigurations = (
             "OBJ_38",
-            "OBJ_39"
+            "OBJ_39",
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
@@ -307,34 +294,30 @@
       "OBJ_38" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
             EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
             );
             HEADER_SEARCH_PATHS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             INFOPLIST_FILE = "UInt128.xcodeproj/UInt128Tests_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
+               "@loader_path/Frameworks",
             );
             OTHER_CFLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             OTHER_LDFLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
+            SWIFT_VERSION = "4.0";
             TARGET_NAME = "UInt128Tests";
          };
          name = "Debug";
@@ -342,34 +325,30 @@
       "OBJ_39" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
             EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
             );
             HEADER_SEARCH_PATHS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             INFOPLIST_FILE = "UInt128.xcodeproj/UInt128Tests_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
+               "@loader_path/Frameworks",
             );
             OTHER_CFLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             OTHER_LDFLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
+               "$(inherited)",
             );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
+            SWIFT_VERSION = "4.0";
             TARGET_NAME = "UInt128Tests";
          };
          name = "Release";
@@ -385,7 +364,7 @@
             GCC_OPTIMIZATION_LEVEL = "s";
             MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_SWIFT_FLAGS = (
-               "-DXcode"
+               "-DXcode",
             );
             PRODUCT_NAME = "$(TARGET_NAME)";
             SDKROOT = "macosx";
@@ -396,11 +375,9 @@
                "appletvos",
                "appletvsimulator",
                "watchos",
-               "watchsimulator"
+               "watchsimulator",
             );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "SWIFT_PACKAGE"
-            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE";
             SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
             USE_HEADERMAP = "NO";
          };
@@ -410,7 +387,7 @@
          isa = "PBXSourcesBuildPhase";
          files = (
             "OBJ_41",
-            "OBJ_42"
+            "OBJ_42",
          );
       };
       "OBJ_41" = {
@@ -424,7 +401,7 @@
       "OBJ_43" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
-            "OBJ_44"
+            "OBJ_44",
          );
       };
       "OBJ_44" = {
@@ -442,7 +419,7 @@
             "OBJ_7",
             "OBJ_10",
             "OBJ_14",
-            "OBJ_15"
+            "OBJ_15",
          );
          path = "";
          sourceTree = "<group>";
@@ -456,7 +433,7 @@
       "OBJ_7" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_8"
+            "OBJ_8",
          );
          name = "Sources";
          path = "";
@@ -465,7 +442,7 @@
       "OBJ_8" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_9"
+            "OBJ_9",
          );
          name = "UInt128";
          path = "Sources/UInt128";
@@ -480,7 +457,7 @@
          isa = "PBXNativeTarget";
          buildConfigurationList = "OBJ_26";
          buildPhases = (
-            "OBJ_29"
+            "OBJ_29",
          );
          dependencies = (
          );
@@ -493,7 +470,7 @@
          buildConfigurationList = "OBJ_19";
          buildPhases = (
             "OBJ_22",
-            "OBJ_24"
+            "OBJ_24",
          );
          dependencies = (
          );
@@ -513,7 +490,7 @@
          buildPhases = (
          );
          dependencies = (
-            "OBJ_35"
+            "OBJ_35",
          );
          name = "UInt128PackageTests";
          productName = "UInt128PackageTests";
@@ -523,10 +500,10 @@
          buildConfigurationList = "OBJ_37";
          buildPhases = (
             "OBJ_40",
-            "OBJ_43"
+            "OBJ_43",
          );
          dependencies = (
-            "OBJ_45"
+            "OBJ_45",
          );
          name = "UInt128Tests";
          productName = "UInt128Tests";

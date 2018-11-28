@@ -32,7 +32,7 @@ Pod::Spec.new do |spec|
   spec.source_files = 'Sources/UInt128/**/*.swift'
 
   # State supported version of the Swift library
-  spec.swift_version = "4.2"
+  spec.swift_version = "4.1"
 
   # OS deployment targets
   spec.ios.deployment_target = "8.0"
