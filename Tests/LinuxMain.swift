@@ -2,5 +2,5 @@ import XCTest
 import UInt128Tests
 
 var tests = [XCTestCaseEntry]()
-tests += NIODNSTests.allTests()
+tests += UInt128Tests.allTests()
 XCTMain(tests)

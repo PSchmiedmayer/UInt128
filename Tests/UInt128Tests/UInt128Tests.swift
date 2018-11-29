@@ -488,7 +488,6 @@ class BinaryIntegerTests : XCTestCase {
             XCTAssertEqual(UInt128(test.input), test.result)
         }
     }
-    #endif
     
     func test_word() {
         let lowerBits = UInt64("100000000000000000000000000000001", radix: 2)!
@@ -496,11 +495,10 @@ class BinaryIntegerTests : XCTestCase {
         let testResult = UInt128(upperBits: upperBits, lowerBits: lowerBits)
 
         testResult.words.forEach { (currentWord) in
-            if UInt.bitWidth == 64 {
-                XCTAssertEqual(currentWord, 4294967297)
-            }
+            XCTAssertEqual(currentWord, 4294967297)
         }
     }
+    #endif
 
     func divisionTests() -> [(dividend: UInt128, divisor: UInt128, quotient: UInt128, remainder: UInt128)] {
         // 0 / 1 = 0, remainder 0

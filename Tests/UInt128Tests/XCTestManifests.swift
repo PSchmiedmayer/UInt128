@@ -2,22 +2,27 @@ import XCTest
 
 #if !os(macOS)
 public func allTests() -> [XCTestCaseEntry] {
-    return [
-        testCase(SystemTests.allTests),
-        testCase(BaseTypeTests.allTests),
-        testCase(FixedWidthIntegerTests.allTests),
-        testCase(BinaryIntegerTests.allTests),
-        testCase(NumericTests.allTests),
-        testCase(EquatableTests.allTests),
-        testCase(ExpressibleByIntegerLiteralTests.allTests),
-        testCase(CustomStringConvertibleTests.allTests),
-        testCase(CustomDebugStringConvertible.allTests),
-        testCase(ComparableTests.allTests),
-        testCase(ExpressibleByStringLiteralTests.allTests),
-        testCase(CodableTests.allTests),
-        testCase(DeprecatedAPITests.allTests),
-        testCase(FloatingPointInterworkingTests.allTests),
-    ]
+    return {
+        var allTests = [
+            testCase(SystemTests.allTests),
+            testCase(BaseTypeTests.allTests),
+            testCase(FixedWidthIntegerTests.allTests),
+            testCase(BinaryIntegerTests.allTests),
+            testCase(NumericTests.allTests),
+            testCase(EquatableTests.allTests),
+            testCase(ExpressibleByIntegerLiteralTests.allTests),
+            testCase(CustomStringConvertibleTests.allTests),
+            testCase(CustomDebugStringConvertible.allTests),
+            testCase(ComparableTests.allTests),
+            testCase(ExpressibleByStringLiteralTests.allTests),
+            testCase(CodableTests.allTests),
+            testCase(FloatingPointInterworkingTests.allTests)
+        ]
+        #if !swift(>=4.0)
+        allTests.append(testCase(DeprecatedAPITests.allTests))
+        #endif
+        return allTests
+    }()
 }
 #endif
 
@@ -72,7 +77,6 @@ extension BinaryIntegerTests {
             ("testTrailingZeroBitCount", testTrailingZeroBitCount),
             ("testInitFailableFloatingPointExactlyExpectedSuccesses", testInitFailableFloatingPointExactlyExpectedSuccesses),
             ("testInitFailableFloatingPointExactlyExpectedFailures", testInitFailableFloatingPointExactlyExpectedFailures),
-            ("test_word", test_word),
             ("testDivideOperator", testDivideOperator),
             ("testDivideEqualOperator", testDivideEqualOperator),
             ("testModuloOperator", testModuloOperator),
@@ -87,6 +91,7 @@ extension BinaryIntegerTests {
         ]
         #if !(arch(arm) || arch(i386))
         allTests.append(("testInitFloatingPoint", testInitFloatingPoint))
+        allTests.append(("test_word", test_word))
         #endif
         return allTests
     }()
