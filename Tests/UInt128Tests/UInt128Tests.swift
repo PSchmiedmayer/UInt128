@@ -477,6 +477,7 @@ class BinaryIntegerTests : XCTestCase {
         }
     }
 
+    #if !(arch(arm) || arch(i386))
     func testInitFloatingPoint() {
         var tests = [(input: Float80(), result: UInt128())]
         tests.append((input: Float80(0.1), result: UInt128()))
@@ -487,7 +488,8 @@ class BinaryIntegerTests : XCTestCase {
             XCTAssertEqual(UInt128(test.input), test.result)
         }
     }
-
+    #endif
+    
     func test_word() {
         let lowerBits = UInt64("100000000000000000000000000000001", radix: 2)!
         let upperBits = UInt64("100000000000000000000000000000001", radix: 2)!
@@ -1002,13 +1004,14 @@ class CodableTests : XCTestCase {
     }
 }
 
-@available(swift, deprecated: 3.2)
+#if !swift(>=4.0)
 class DeprecatedAPITests : XCTestCase {
     func testFromUnparsedString() {
         XCTAssertThrowsError(try UInt128.fromUnparsedString(""))
         XCTAssertEqual(try UInt128.fromUnparsedString("1"), UInt128(1))
     }
 }
+#endif
 
 class FloatingPointInterworkingTests : XCTestCase {
     func testNonFailableInitializer() {

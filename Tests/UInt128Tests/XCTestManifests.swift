@@ -66,25 +66,30 @@ extension FixedWidthIntegerTests {
 }
 
 extension BinaryIntegerTests {
-    static var allTests = [
-        ("testBitWidthEquals128", testBitWidthEquals128),
-        ("testTrailingZeroBitCount", testTrailingZeroBitCount),
-        ("testInitFailableFloatingPointExactlyExpectedSuccesses", testInitFailableFloatingPointExactlyExpectedSuccesses),
-        ("testInitFailableFloatingPointExactlyExpectedFailures", testInitFailableFloatingPointExactlyExpectedFailures),
-        ("testInitFloatingPoint", testInitFloatingPoint),
-        ("test_word", test_word),
-        ("testDivideOperator", testDivideOperator),
-        ("testDivideEqualOperator", testDivideEqualOperator),
-        ("testModuloOperator", testModuloOperator),
-        ("testModuloEqualOperator", testModuloEqualOperator),
-        ("testBooleanAndEqualOperator", testBooleanAndEqualOperator),
-        ("testBooleanOrEqualOperator", testBooleanOrEqualOperator),
-        ("testBooleanXorEqualOperator", testBooleanXorEqualOperator),
-        ("testMaskingRightShiftEqualOperatorStandardCases", testMaskingRightShiftEqualOperatorStandardCases),
-        ("testMaskingRightShiftEqualOperatorEdgeCases", testMaskingRightShiftEqualOperatorEdgeCases),
-        ("testMaskingLeftShiftEqualOperatorStandardCases", testMaskingLeftShiftEqualOperatorStandardCases),
-        ("testMaskingLeftShiftEqualOperatorEdgeCases", testMaskingLeftShiftEqualOperatorEdgeCases)
-    ]
+    static var allTests = { () -> [(String, (BinaryIntegerTests) -> () -> ())] in
+        var allTests = [
+            ("testBitWidthEquals128", testBitWidthEquals128),
+            ("testTrailingZeroBitCount", testTrailingZeroBitCount),
+            ("testInitFailableFloatingPointExactlyExpectedSuccesses", testInitFailableFloatingPointExactlyExpectedSuccesses),
+            ("testInitFailableFloatingPointExactlyExpectedFailures", testInitFailableFloatingPointExactlyExpectedFailures),
+            ("test_word", test_word),
+            ("testDivideOperator", testDivideOperator),
+            ("testDivideEqualOperator", testDivideEqualOperator),
+            ("testModuloOperator", testModuloOperator),
+            ("testModuloEqualOperator", testModuloEqualOperator),
+            ("testBooleanAndEqualOperator", testBooleanAndEqualOperator),
+            ("testBooleanOrEqualOperator", testBooleanOrEqualOperator),
+            ("testBooleanXorEqualOperator", testBooleanXorEqualOperator),
+            ("testMaskingRightShiftEqualOperatorStandardCases", testMaskingRightShiftEqualOperatorStandardCases),
+            ("testMaskingRightShiftEqualOperatorEdgeCases", testMaskingRightShiftEqualOperatorEdgeCases),
+            ("testMaskingLeftShiftEqualOperatorStandardCases", testMaskingLeftShiftEqualOperatorStandardCases),
+            ("testMaskingLeftShiftEqualOperatorEdgeCases", testMaskingLeftShiftEqualOperatorEdgeCases)
+        ]
+        #if !(arch(arm) || arch(i386))
+        allTests.append(("testInitFloatingPoint", testInitFloatingPoint))
+        #endif
+        return allTests
+    }()
 }
 
 extension NumericTests {
@@ -145,12 +150,13 @@ extension CodableTests {
     ]
 }
 
-@available(swift, deprecated: 3.2)
+#if !swift(>=4.0)
 extension DeprecatedAPITests {
     static var allTests = [
         ("testFromUnparsedString", testFromUnparsedString)
     ]
 }
+#endif
 
 extension FloatingPointInterworkingTests {
     static var allTests = [
